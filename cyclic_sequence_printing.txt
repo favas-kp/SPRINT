@@ -1,0 +1,33 @@
+3 7 
+seq_location:59 
+seq_length:3 
+cycle_location:62 
+cycle_length:25 
+
+7 cycle_location cycle_ptr 
+1 cycle_location cycle_length cycle_end 
+7 seq_location seq_ptr 
+1 seq_location seq_length seq_end  
+3 c1 
+
+one:1 
+cycle_ptr:0 
+cycle_end:0 
+seq_ptr:0 
+seq_end:0 
+
+c1:5 cycle_ptr cycle_end c1_y 
+9 
+
+c1_y:7 seq_ptr seq_ptr_val 
+7 cycle_ptr cycle_ptr_val 
+7 seq_ptr_val:0 cycle_ptr_val:0 
+1 seq_ptr one seq_ptr 
+1 cycle_ptr one cycle_ptr 
+
+c2:5 seq_ptr seq_end c2_y 
+7 seq_location seq_ptr 
+
+c2_y:3 c1 
+
+1 2 3 
