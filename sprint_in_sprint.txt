@@ -1,0 +1,177 @@
+3 go 
+start:code 
+
+current:0 
+start_low:0 
+picker:0 
+zero:0 
+one:1 
+two:2 
+three:3 
+four:4 
+five:5 
+six:6 
+seven:7 
+eight:8 
+nine:9 
+
+go:7 start current 
+2 current one start_low 
+
+begin:7 current curr_ins0 
+7 current curr_ins1 
+7 current curr_ins2 
+7 current curr_ins3 
+7 current curr_ins4 
+7 current curr_ins5 
+7 current curr_ins6 
+7 current curr_ins7 
+7 current curr_ins8 
+7 current curr_ins9 
+
+4 curr_ins0:0 zero put_inst 
+4 curr_ins1:0 one add_inst 
+4 curr_ins2:0 two sub_inst 
+4 curr_ins3:0 three jmp_inst 
+4 curr_ins4:0 four eql_inst 
+4 curr_ins5:0 five less_inst 
+4 curr_ins6:0 six input_inst 
+4 curr_ins7:0 seven cp_inst 
+4 curr_ins8:0 eight multi_inst 
+4 curr_ins9:0 nine stop_inst 
+9
+stop_inst:9 
+
+
+put_inst:1 current one picker 
+7 picker put_op1_val 
+7 put_op1_val:0 put_op1 
+1 picker one picker 
+7 picker put_op2_val 
+1 put_op2_val:0 start_low put_op2 
+
+0 put_op1:0 put_op2:0 
+1 current three current 
+3 begin 
+
+
+add_inst:1 current one picker 
+7 picker add_op1_val 
+1 add_op1_val:0 start_low add_op1 
+1 picker one picker 
+7 picker add_op2_val 
+1 add_op2_val:0 start_low add_op2 
+1 picker one picker 
+7 picker add_dest_val 
+1 add_dest_val:0 start_low add_dest 
+
+1 add_op1:0 add_op2:0 add_dest:0 
+1 current four current 
+3 begin 
+
+
+sub_inst:1 current one picker 
+7 picker sub_op1_val 
+1 sub_op1_val:0 start_low sub_op1 
+1 picker one picker 
+7 picker sub_op2_val 
+1 sub_op2_val:0 start_low sub_op2 
+1 picker one picker 
+7 picker sub_dest_val 
+1 sub_dest_val:0 start_low sub_dest 
+
+2 sub_op1:0 sub_op2:0 sub_dest:0 
+1 current four current 
+3 begin 
+
+
+jmp_inst:1 current one picker 
+7 picker jump_op 
+1 jump_op:0 start_low current 
+3 begin 
+
+
+eql_inst:1 current one picker 
+7 picker eql_op1_val 
+1 eql_op1_val:0 start_low eql_op1 
+1 picker one picker 
+7 picker eql_op2_val 
+1 eql_op2_val:0 start_low eql_op2 
+1 picker one picker 
+7 picker eql_dest_val 
+
+4 eql_op1:0 eql_op2:0 eql_chk_y 
+1 current four current 
+3 begin 
+
+eql_chk_y:1 eql_dest_val:0 start_low current 
+3 begin 
+
+
+less_inst:1 current one picker 
+7 picker less_op1_val 
+1 less_op1_val:0 start_low less_op1 
+1 picker one picker 
+7 picker less_op2_val 
+1 less_op2_val:0 start_low less_op2 
+1 picker one picker 
+7 picker less_dest_val 
+
+5 less_op1:0 less_op2:0 less_chk_y 
+1 current four current 
+3 begin 
+
+less_chk_y:1 less_dest_val:0 start_low current 
+3 begin 
+
+
+input_inst:1 current one picker 
+7 picker inp_dest_val 
+1 inp_dest_val:0 start_low inp_dest 
+6 inp_dest:0 
+1 current two current 
+3 begin 
+
+
+cp_inst:1 current one picker 
+7 picker cp_op1_val 
+1 cp_op1_val:0 start_low cp_op1 
+1 picker one picker 
+7 picker cp_op2_val 
+1 cp_op2_val:0 start_low cp_op2 
+
+7 cp_op1:0 cp_op2:0 
+1 current three current 
+3 begin 
+
+
+multi_inst:3 multi_start 
+multi_temp:0 
+multi_cntr:0 
+
+multi_start:1 current one picker 
+7 picker multi_op1_val 
+1 multi_op1_val:0 start_low multi_op1 
+7 multi_op1:0 multi_cntr 
+
+1 picker one picker 
+7 picker multi_op2_val 
+1 multi_op2_val:0 start_low multi_op2 
+
+1 picker one picker 
+7 picker multi_op3_val 
+1 multi_op3_val:0 start_low multi_op3 
+
+multi_c1:4 multi_cntr zero multi_c1_y 
+1 multi_temp multi_op2:0 multi_temp 
+2 multi_cntr one multi_cntr 
+3 multi_c1 
+
+multi_c1_y:7 multi_temp multi_op3:0 
+7 zero multi_temp 
+1 current four current 
+3 begin  
+
+
+
+code:6 10 6 11 8 10 11 12 9 0 0 0
