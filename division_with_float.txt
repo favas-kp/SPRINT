@@ -1,0 +1,53 @@
+3 start 
+dividend:0 
+divisor:0 
+result_loc:109 
+rem:0 
+rem_temp:0 
+limit:10 
+quot:0 
+zero:0 
+one:1 
+ten:10 
+
+
+start:6 dividend 
+6 divisor 
+7 dividend rem 
+
+c1:5 rem divisor c1_y 
+1 quot one quot 
+2 rem divisor rem 
+3 c1 
+
+c1_y:7 result_loc result_loc_val1 
+7 quot result_loc_val1:0 
+1 result_loc one result_loc 
+
+c2:4 rem zero stop 
+4 limit zero stop 
+
+c3:4 rem zero c3_y 
+1 ten rem_temp rem_temp 
+2 rem one rem 
+3 c3 
+
+stop:9
+
+c3_y:7 rem_temp rem 
+7 zero rem_temp 
+7 result_loc result_loc_val2
+7 zero result_loc_val2:0 
+
+c4:5 rem divisor c4_y 
+7 result_loc result_loc_val3 
+7 result_loc result_loc_val4 
+1 result_loc_val3:0 one result_loc_val4:0 
+2 rem divisor rem 
+3 c4 
+
+c4_y:1 result_loc one result_loc 
+2 limit one limit 
+3 c2 
+
+ans:0 
