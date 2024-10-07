@@ -1,0 +1,27 @@
+3 5 
+first_element_location:49 
+n:10 
+
+3 start 
+one:1 
+current:0 
+next:0 
+temp:1 
+counter:0 
+pointer:0 
+
+start:7 first_element_location pointer 
+6 n 
+
+c1:5 counter n c1_y 
+9 
+
+c1_y:7 next current 
+7 temp next 
+1 current next temp 
+
+7 pointer pointer_val 
+7 current pointer_val:0 
+1 pointer one pointer 
+1 counter one counter 
+3 c1
