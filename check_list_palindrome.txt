@@ -1,0 +1,29 @@
+3 6 
+first_element_location:51 
+length:3 
+result:2 
+
+3 go 
+start:0 
+end:0 
+one:1 
+
+go:7 first_element_location start 
+1 start length end 
+2 end one end 
+
+c1:5 start end c1_y 
+stop:9 
+
+c1_y:7 start start_val 
+7 end end_val  
+
+c2:4 start_val:0 end_val:0 c2_y 
+7 one result 
+9 
+
+c2_y:1 start one start 
+2 end one end 
+3 c1 
+
+1 2 1
