@@ -1,0 +1,23 @@
+3 7 
+
+first_element_location:44 
+length:4 
+
+target:7 
+result:0 
+7 first_element_location counter 
+1 first_element_location length limit 
+
+3 c1 
+limit:0 
+one:1 
+
+
+c1:5 counter limit c2 
+3 stop 
+
+c2:4 counter:first_element_location target c2_y  1 counter one counter 
+3 c1  c2_y: 7 one result 
+stop:9 
+
+2 1 4 7

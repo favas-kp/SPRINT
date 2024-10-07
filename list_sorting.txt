@@ -1,0 +1,42 @@
+3 5 
+first_location:83 
+length:5 
+
+3 begin 
+one:1 
+temp:0 
+start:0 
+end:0 
+ctr_1:0 
+ctr_2:0 
+
+begin:7 first_location start 
+1 first_location length end 
+7 start ctr_1 
+7 start ctr_2 
+c1:5 ctr_1 end c2 
+9 
+
+c2:5 ctr_2 end c2_y 
+1 ctr_1 one ctr_1 
+7 ctr_1 ctr_2 
+3 c1 
+
+c2_y:7 ctr_1 ctr_v1 
+7 ctr_2 ctr_v2 
+c3:5 ctr_v1:0 ctr_v2:0 c3_y 
+
+7 ctr_1 ctr_1_1 
+7 ctr_1 ctr_1_2 
+7 ctr_2 ctr_2_1 
+7 ctr_2 ctr_2_2 
+
+7 ctr_1_1:0 temp 
+7 ctr_2_1:0 ctr_1_2:0 
+7 temp ctr_2_2:0 
+3 c3_y 
+
+c3_y:1 ctr_2 one ctr_2 
+3 c1 
+
+55 44 22 33 11

@@ -1,0 +1,34 @@
+3 5 
+n:1234 
+ans:0 
+
+3 start 
+rem:0 
+quo:0 
+ctr_ten:10 
+mlt_out:0 
+zero:0 
+one:1 
+ten:10 
+
+start:7 n rem 
+
+c1:5 rem ten c2 
+1 quo one quo 
+2 rem ten rem 
+3 c1
+
+c2:4 ctr_ten zero c2_y 
+1 mlt_out ans mlt_out 
+2 ctr_ten one ctr_ten 
+3 c2
+
+c2_y:1 mlt_out rem ans 
+4 quo zero stop 
+7 zero mlt_out 
+7 quo rem 
+7 ten ctr_ten 
+7 zero quo 
+3 c1
+
+stop:9
